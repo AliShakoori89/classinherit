@@ -19,6 +19,9 @@ class Abstrackt(object):
     def Shasi(self,shasi):
         return "{} {} darad".format(self.name,shasi)
 
+    def Nahve_kar(self):
+        pass
+
 
 class Bus(Abstrackt):
 
@@ -41,7 +44,7 @@ class Truck(Abstrackt):
         return "kamioon {} ast".format(self)
         
         
-    def Nahve_kar(self,name):
+    def Nahve_kar(self):
         return "{} bar ra be mahle mored nazar mibarad".format(self.name)
 
 Bus_1=Bus('ootooboos')
@@ -49,6 +52,9 @@ print(Bus_1.Harkat())
 
 Bus_2=Bus('ootooboos')
 print(Bus_2.Nahve_kar())
+
+Truck_1=Truck('Kamion')
+print(Truck_1.Nahve_kar())
 
 print(Truck.Color('ghahveei'))
 
