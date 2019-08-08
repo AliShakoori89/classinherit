@@ -1,10 +1,12 @@
 class Abstrackt(object):
-    def __init__(self,otagh,shasi,charkh):
+    def __init__(self,name,otagh,shasi,charkh):
         self.otagh=otagh
         self.shasi=shasi
         self.charkh=charkh
+        self.name=name
 
     def Tedad_charkh(self,charkh):
+        
         return "{} daraye {} charkh ast".format(self.name,charkh)
     
     def Harkat(self):
@@ -18,9 +20,6 @@ class Abstrackt(object):
 
     def Shasi(self,shasi):
         return "{} {} darad".format(self.name,shasi)
-
-    def Nahve_kar(self):
-        pass
 
 
 class Bus(Abstrackt):
@@ -44,17 +43,15 @@ class Truck(Abstrackt):
         return "kamioon {} ast".format(self)
         
         
-    def Nahve_kar(self):
+    def Nahve_kar(self,name):
         return "{} bar ra be mahle mored nazar mibarad".format(self.name)
 
 Bus_1=Bus('ootooboos')
 print(Bus_1.Harkat())
+print(Bus_1.Tedad_charkh(9))
 
 Bus_2=Bus('ootooboos')
 print(Bus_2.Nahve_kar())
-
-Truck_1=Truck('Kamion')
-print(Truck_1.Nahve_kar())
 
 print(Truck.Color('ghahveei'))
 
